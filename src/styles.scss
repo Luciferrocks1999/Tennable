@@ -1,0 +1,277 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+    float: left;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table tbody tr {
+    height: 4.5rem;
+    border: 1px solid #ddd;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+  .sidenav {
+    height: 100%;
+    width: 48px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .sidenav:hover
+  {
+    width: 165px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  /* #a1{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: red;
+  display: block;
+  margin-top:20px;
+  } */
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 36px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .sidenav span {
+    margin-left: 14px;
+  }
+  .sidenav .no {
+          position: relative;
+          display: block;
+          padding: 8px 24px; 
+          font-size: 1.6rem;
+          text-decoration: none;
+  }
+  .sidenav .no.toggle::after {
+              position: absolute;
+              top: 50%;
+              right: 32px;
+              margin-top: -5px;
+              width: 6px;
+              height: 6px;
+              border-right: solid 1px #333;
+              border-bottom: solid 1px #333;
+              transform: rotate(45deg);
+              content: "";
+          }
+          
+          .sidenav .no:hover {
+              background-color: #f4f4f4;
+          }
+      
+  
+  .nest {
+      display: none;
+  }
+  .main_wrapper{
+    
+        font-size: 1.2rem;
+        overflow-y: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 500px;
+    
+  }
+.wrapper_header{
+    display: block;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: #aaa;
+    overflow: hidden;
+    position: relative;
+}
+.body_wrapper{
+    flex-direction: column;
+    height: 40rem;
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 0;
+}
+.body_content{
+    flex-direction: column;
+    border: .15rem solid #eee;
+    border-radius: .3rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 0;
+}
+.main_body{
+    flex-direction: column;
+    height: 40rem;
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 0;
+}
+
+
+
+
+.loading{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.loading .loading_gif{
+    display: block;
+    border: 3px solid #ccc;
+    border-top: 3px solid #aaa;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: loading-spinner-spin 2s linear infinite;
+}
+.loading h2{
+    display: block;
+    color: #aaa;
+    margin-left: -5rem;
+    margin-top: 1rem;
+}
+
+.chart_matrix{
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 0;
+}
+.chart_matrix .chart_wrapper{
+    font-size: 1.2rem;
+    overflow-y: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.chart_matrix_table{
+padding: 0;
+height: 100%;
+border-collapse: initial;
+}
+.chart_matrix_row{
+    border: none;
+    min-height: 5rem;
+}
+
+.chart-matrix .chart_matrix_table .chart_matrix_row:first-child .chart_matrix_cell {
+        border-top: none;
+    }
+
+.chart_matrix .chart_matrix_table .chart_matrix_row .chart_matrix_cell:first-child {
+        border-left: none;
+    }
+.chart_matrix .chart_matrix_table .chart_matrix_cell {
+    border: .1rem solid #eee;
+    border-left: none;
+    border-top: none;
+    padding: .5rem;
+    text-align: center;
+    cursor: default;
+    white-space: normal;
+    line-height: normal;
+    overflow: hidden;
+    position: relative;
+}
+.chart_matrix_cell_wrapper{
+    min-height: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart_matrix_table_label{
+    color: #aaa;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position : absolute;
+}
+.chart_matrix .chart_matrix_table_header{
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.chart_matrix .chart_matrix_selectable{
+    cursor: pointer!important;
+}
+.chart_matrix_cell_wrapper .chart_matrix_progress {
+    border-radius: .3rem;
+    vertical-align: middle;
+    background: #ccc;
+    background-image: -webkit-repeating-linear-gradient(135deg,transparent,transparent 1rem,rgba(255,255,255,.1) 1rem,rgba(255,255,255,.1) 2rem);
+    background-image: repeating-linear-gradient(135deg,transparent,transparent 1rem,rgba(255,255,255,.1) 1rem,rgba(255,255,255,.1) 2rem);
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    right: .5rem;
+    bottom: .5rem;
+}
+.chart_matrix_cell_wrapper .chart_matrix_progress_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: .3rem 0 0 .3rem;
+}
+.chart_matrix_cell_wrapper .chart_matrix_progress_label {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
